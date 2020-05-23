@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+    <title>操作内置对象</title>
+</head>
+<body>
+<p th:text="${#httpServletRequest.getRemoteAddr()}"/>
+<p th:text="${#httpServletRequest.getAttribute('requestMessage')}"/>
+<p th:text="${#httpSession.getId()}"/>
+<p th:text="${#httpServletRequest.getServletContext().getRealPath('/')}"/>
+<hr/>
+<p th:text="'requestMessage = ' + ${requestMessage}"/>
+<p th:text="'sessionMessage = ' + ${session.sessionMessage}"/>
+<p th:text="'applicationMessage = ' + ${application.applicationMessage}"/>
+</body>
+</html>

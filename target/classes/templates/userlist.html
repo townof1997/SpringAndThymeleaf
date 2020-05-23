@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<table class="table">
+    <caption>基本的表格布局</caption>
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>城市</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Tanmay</td>
+        <td>Bangalore</td>
+    </tr>
+    <tr>
+        <td>Sachin</td>
+        <td>Mumbai</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="col-sm-12 col-lg-12" id="list">
+    <table class="span12 table table-striped">
+        <thead>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="" th:each="s : ${user_list}">
+            <tr>
+                <td th:text='${s.id}'></td>
+                <td th:text='${s.name}'></td>
+                <td>
+                    <a class="btn btn-primary btn-sm" th:href="@{'/confDiscount/editBankGroup?id='+${s.id}}">编辑</a>
+                </td>
+            </tr>
+
+
+        </div>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

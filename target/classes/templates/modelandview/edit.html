@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多个路径匹配</title>
+</head>
+<body>
+<div>
+    <table class="list">
+        <thead>
+        <tr>
+            <td>id</td>
+            <td>用户名</td>
+            <td>日期</td>
+        </tr>
+        </thead>
+        <tbody>
+        <div class="" th:each="s : ${users}">
+            <tr>
+                <td th:text='${s.id}'></td>
+                <td th:text='${s.name}'></td>
+                <td th:text='${s.date}'></td>
+
+            </tr>
+        </div>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

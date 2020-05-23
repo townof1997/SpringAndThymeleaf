@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>map集合展示数据</title>
+</head>
+<body>
+<table>
+    <tr><td>No.</td><td>KEY</td><td>UID</td><td>姓名</td><td>年龄</td><td>偶数</td><td>奇数</td></tr>
+    <tr th:each="memberEntry,s:${allUsers}">
+        <td th:text="${s.index + 1}"/>
+        <td th:text="${memberEntry.key}"/>
+        <td th:text="${memberEntry.value.uid}"/>
+        <td th:text="${memberEntry.value.name}"/>
+        <td th:text="${memberEntry.value.age}"/>
+        <td th:text="${s.even}"/>
+        <td th:text="${s.odd}"/>
+    </tr>
+</table>
+</body>
+</html>

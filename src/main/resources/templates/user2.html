@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User2的thymeleaf的逻辑判断</title>
+</head>
+<body>
+<span th:if="${member.age lt 18}">
+未成年人！
+</span>
+<span th:if="${member.name eq '啊三'}">
+欢迎小三来访问！
+</span>
+<span th:if="${member.age lt 18}">
+未成年人！
+</span>
+<span th:if="${member.name eq '啊三'}">
+欢迎小三来访问！
+</span>
+<h1>不满足条件的判断</h1>
+<span th:unless="${member.age gt 18}">
+你还不满18岁，不能够看电影！
+</span>
+<h1>通过swith进行分支判断</h1>
+<span th:switch="${member.uid}">
+<p th:case="100">uid为101的员工来了</p>
+<p th:case="99">uid为102的员工来了</p>
+<p th:case="*">没有匹配成功的数据！</p>
+</span>
+
+
+</body>
+</html>

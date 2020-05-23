@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<p th:text="'user：' + ${user.id} + '1'">111</p>
+<p th:text="'user：' + ${user.date} + '1'">222</p>
+<p th:text="'Hello！, ' + ${user.name} + '!'" >3333</p>
+<a th:href="@{/showStyle}">访问controller方法</a>
+<a th:href="@{/hello.html}">访问静态页面</a>
+
+<!--<div th:include="@{/commons/footer::body::footer} :: companyInfo" th:with="projectName=百度"/>-->
+</body>
+</html>
